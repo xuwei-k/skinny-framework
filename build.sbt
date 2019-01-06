@@ -51,8 +51,7 @@ lazy val baseSettings = Seq(
     false
   },
   transitiveClassifiers in Global := Seq(Artifact.SourceClassifier),
-  // NOTE: forking when testing doesn't work for some existing tests
-  // fork in Test := true,
+  fork in Test := true,
   logBuffered in Test := false,
   testForkedParallel in Test := true,
   // TODO: Fix warning - javaOptions will be ignored, fork is set to false
