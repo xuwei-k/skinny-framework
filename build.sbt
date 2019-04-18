@@ -80,7 +80,7 @@ lazy val common = (project in file("common"))
       jodaDependencies ++ testDependencies(scalaVersion.value) ++ Seq(
         "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.1"            % Compile,
         "org.skinny-framework"   %% "skinny-micro-common"      % skinnyMicroVersion % Compile,
-        "com.typesafe"           % "config"                    % "1.3.3"            % Compile,
+        "com.typesafe"           % "config"                    % "1.3.4"            % Compile,
         "org.apache.lucene"      % "lucene-core"               % kuromojiVersion    % Provided,
         "org.apache.lucene"      % "lucene-analyzers-common"   % kuromojiVersion    % Provided,
         "org.apache.lucene"      % "lucene-analyzers-kuromoji" % kuromojiVersion    % Provided
