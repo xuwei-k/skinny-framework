@@ -348,7 +348,7 @@ lazy val slf4jApiDependencies = Seq(
   "org.slf4j" % "slf4j-api" % slf4jApiVersion % Compile
 )
 lazy val jodaDependencies = Seq(
-  "joda-time" % "joda-time"    % "2.10.1" % Compile,
+  "joda-time" % "joda-time"    % "2.10.3" % Compile,
   "org.joda"  % "joda-convert" % "2.2.1"  % Compile
 )
 lazy val mailDependencies = slf4jApiDependencies ++ Seq(
