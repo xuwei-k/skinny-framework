@@ -214,7 +214,7 @@ lazy val freemarker = (project in file("freemarker"))
     name := "skinny-freemarker",
     libraryDependencies ++= servletApiDependencies ++ Seq(
       "commons-beanutils"    % "commons-beanutils"  % "1.9.3"                  % Compile,
-      "org.freemarker"       % "freemarker"         % "2.3.28"                 % Compile,
+      "org.freemarker"       % "freemarker"         % "2.3.29"                 % Compile,
       "org.skinny-framework" %% "skinny-micro-test" % skinnyMicroVersion.value % Test
     ) ++ testDependencies(scalaVersion.value)
   )
