@@ -14,7 +14,7 @@ val appVersion = "0.1.0-SNAPSHOT"
 
 val skinnyVersion = "3.0.3"
 val theScalaVersion = "2.12.8"
-val jettyVersion = "9.4.19.v20190610"
+val jettyVersion = "9.4.21.v20190926"
 
 lazy val baseSettings = servletSettings ++ Seq(
   organization := appOrganization,
