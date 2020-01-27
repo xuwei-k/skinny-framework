@@ -2,8 +2,10 @@ package skinny.util
 
 import org.scalatest._
 import skinny.json.AngularJSONStringOps
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class AngularJSONStringOpsSpec extends FlatSpec with Matchers {
+class AngularJSONStringOpsSpec extends AnyFlatSpec with Matchers {
 
   behavior of "AngularJSONStringOps"
 

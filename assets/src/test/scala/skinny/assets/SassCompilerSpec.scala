@@ -3,8 +3,10 @@ package skinny.assets
 import org.scalatest._
 import org.slf4j.LoggerFactory
 import skinny.ScalaVersion
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class SassCompilerSpec extends FlatSpec with Matchers {
+class SassCompilerSpec extends AnyFlatSpec with Matchers {
 
   val logger = LoggerFactory.getLogger(classOf[SassCompilerSpec])
 

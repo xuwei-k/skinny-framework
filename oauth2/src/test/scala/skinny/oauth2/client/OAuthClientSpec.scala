@@ -3,8 +3,10 @@ package skinny.oauth2.client
 import java.net.URL
 
 import org.scalatest._
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class OAuthClientSpec extends FunSpec with Matchers {
+class OAuthClientSpec extends AnyFunSpec with Matchers {
 
   // https://github.com/settings/applications
   describe("GitHub OAuth") {

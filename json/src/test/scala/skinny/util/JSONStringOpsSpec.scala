@@ -3,12 +3,14 @@ package skinny.util
 import org.scalatest._
 
 import scala.util.{ Success, Try }
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
 // http://www.playframework.com/documentation/2.2.x/ScalaJson
 case class UserResponse(user: User)
 case class User(name: String, age: Int, email: String, isAlive: Boolean = false, friend: Option[User] = None)
 
-class JSONStringOpsSpec extends FunSpec with Matchers {
+class JSONStringOpsSpec extends AnyFunSpec with Matchers {
 
   describe("JSONStringOps#fromJSONString") {
 

@@ -4,8 +4,10 @@ import org.scalatest._
 import skinny.micro.Format
 import skinny.test.MockApiController
 import unit.DBSettings
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class AngularProgrammersControllerSpec extends FunSpec with Matchers with DBSettings {
+class AngularProgrammersControllerSpec extends AnyFunSpec with Matchers with DBSettings {
 
   def createMockController = new AngularXHRProgrammersController with MockApiController
 

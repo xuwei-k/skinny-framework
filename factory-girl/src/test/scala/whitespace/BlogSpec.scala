@@ -3,11 +3,13 @@ package whitespace
 import scalikejdbc._
 import scalikejdbc.scalatest.AutoRollback
 
-import org.scalatest.{ fixture, Matchers }
+import org.scalatest.fixture
 import skinny.test.FactoryGirl
 import skinny.logging.Logging
+import org.scalatest.funspec
+import org.scalatest.matchers.should.Matchers
 
-class BlogSpec extends fixture.FunSpec with Matchers with Connection with CreateTables with AutoRollback with Logging {
+class BlogSpec extends funspec.FixtureAnyFunSpec with Matchers with Connection with CreateTables with AutoRollback with Logging {
 
   override def db(): DB = NamedDB(Symbol("ws")).toDB()
 

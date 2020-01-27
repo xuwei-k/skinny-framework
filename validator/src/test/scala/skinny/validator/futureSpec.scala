@@ -3,8 +3,10 @@ package skinny.validator
 import org.scalatest._
 
 import org.joda.time._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class futureSpec extends FlatSpec with Matchers {
+class futureSpec extends AnyFlatSpec with Matchers {
 
   behavior of "future"
 

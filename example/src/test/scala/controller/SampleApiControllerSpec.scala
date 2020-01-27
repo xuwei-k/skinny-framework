@@ -5,8 +5,10 @@ import org.scalatest._
 import skinny.test.scalatest.ThreadLocalDBAutoRollback
 import unit.DBSettings
 import skinny.test.MockApiController
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class SampleApiControllerSpec extends FunSpec with Matchers with DBSettings with ThreadLocalDBAutoRollback {
+class SampleApiControllerSpec extends AnyFunSpec with Matchers with DBSettings with ThreadLocalDBAutoRollback {
 
   def createMockController = new SampleApiController with MockApiController
 

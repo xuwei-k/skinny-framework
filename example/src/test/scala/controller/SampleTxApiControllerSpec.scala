@@ -2,8 +2,10 @@ package controller
 
 import org.scalatest._
 import skinny.test.MockApiController
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class SampleTxApiControllerSpec extends FunSpec with Matchers {
+class SampleTxApiControllerSpec extends AnyFunSpec with Matchers {
 
   def createMockController = new SampleTxApiController with MockApiController
 

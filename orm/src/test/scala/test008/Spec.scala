@@ -6,6 +6,8 @@ import scalikejdbc._
 import scalikejdbc.scalatest.AutoRollback
 import skinny.dbmigration.DBSeeds
 import skinny.orm._
+import org.scalatest.funspec
+import org.scalatest.matchers.should.Matchers
 
 trait Connection {
   Class.forName("org.h2.Driver")
@@ -25,7 +27,7 @@ trait CreateTables extends DBSeeds { self: Connection =>
   runIfFailed(sql"select count(1) from blog")
 }
 
-class Spec extends fixture.FunSpec with Matchers with Connection with CreateTables with AutoRollback {
+class Spec extends funspec.FixtureAnyFunSpec with Matchers with Connection with CreateTables with AutoRollback {
 
   override def db(): DB = NamedDB(Symbol("test008")).toDB()
 

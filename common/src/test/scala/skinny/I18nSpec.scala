@@ -2,8 +2,10 @@ package skinny
 
 import org.scalatest._
 import java.util.Locale
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class I18nSpec extends FlatSpec with Matchers {
+class I18nSpec extends AnyFlatSpec with Matchers {
 
   behavior of "I18n"
 

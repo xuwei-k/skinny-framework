@@ -5,6 +5,8 @@ import scalikejdbc._
 import scalikejdbc.scalatest.AutoRollback
 import skinny.dbmigration.DBSeeds
 import skinny.orm._
+import org.scalatest.funspec
+import org.scalatest.matchers.should.Matchers
 
 trait Connection {
   Class.forName("org.h2.Driver")
@@ -41,7 +43,7 @@ create table tag (
   runIfFailed(sql"select count(1) from article")
 }
 
-class Issue219Spec extends fixture.FunSpec with Matchers with Connection with CreateTables with AutoRollback {
+class Issue219Spec extends funspec.FixtureAnyFunSpec with Matchers with Connection with CreateTables with AutoRollback {
 
   case class User(id: Long, name: String)
   case class Article(id: Long, title: String, userId: Option[Long], user: Option[User] = None, tags: Seq[Tag] = Nil)

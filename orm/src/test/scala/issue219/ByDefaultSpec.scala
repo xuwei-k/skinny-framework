@@ -5,6 +5,8 @@ import scalikejdbc._
 import scalikejdbc.scalatest.AutoRollback
 import skinny.dbmigration.DBSeeds
 import skinny.orm._
+import org.scalatest.funspec
+import org.scalatest.matchers.should.Matchers
 
 trait ByDefaultConnection {
   Class.forName("org.h2.Driver")
@@ -42,7 +44,7 @@ create table tag (
 }
 
 class ByDefaultSpec
-    extends fixture.FunSpec
+    extends funspec.FixtureAnyFunSpec
     with Matchers
     with ByDefaultConnection
     with ByDefaultCreateTables

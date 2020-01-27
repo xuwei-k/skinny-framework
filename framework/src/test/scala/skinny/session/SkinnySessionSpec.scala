@@ -1,13 +1,14 @@
 package skinny.session
 
 import scalikejdbc._
-import org.scalatest.{ FunSpec, Matchers }
 import skinny.session.jdbc.SkinnySession
 import org.joda.time.DateTime
 import skinny.orm.feature._
 import skinny.orm.JodaImplicits._
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class SkinnySessionSpec extends FunSpec with Matchers with Connection with CreateTables {
+class SkinnySessionSpec extends AnyFunSpec with Matchers with Connection with CreateTables {
 
   val finderWithServletSessions: CRUDFeatureWithId[Long, SkinnySession] = {
     SkinnySession.joins(SkinnySession.servletSessionsRef)

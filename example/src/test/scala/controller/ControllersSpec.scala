@@ -3,8 +3,10 @@ package controller
 import org.scalatest._
 import org.scalatestplus.mockito.MockitoSugar
 import skinny._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class ControllersSpec extends FlatSpec with Matchers with MockitoSugar {
+class ControllersSpec extends AnyFlatSpec with Matchers with MockitoSugar {
 
   it should "mount" in {
     Controllers.mount(mock[ServletContext])

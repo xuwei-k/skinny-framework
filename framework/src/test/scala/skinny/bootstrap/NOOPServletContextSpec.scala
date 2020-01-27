@@ -6,8 +6,10 @@ import org.scalatest._
 import skinny.controller.{ SkinnyApiController, SkinnyController, SkinnyServlet }
 import skinny.micro.WebApp
 import skinny.micro.routing.RouteRegistry
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class NOOPServletContextSpec extends FunSpec with Matchers {
+class NOOPServletContextSpec extends AnyFunSpec with Matchers {
   RouteRegistry.init()
 
   val app1 = new SkinnyController {

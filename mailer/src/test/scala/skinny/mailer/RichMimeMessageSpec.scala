@@ -5,8 +5,10 @@ import javax.mail.internet.MimeMessage
 
 import org.scalatest._
 import org.scalatestplus.mockito.MockitoSugar
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class RichMimeMessageSpec extends FlatSpec with Matchers with MockitoSugar {
+class RichMimeMessageSpec extends AnyFlatSpec with Matchers with MockitoSugar {
 
   it should "be available" in {
     val message = new RichMimeMessage {

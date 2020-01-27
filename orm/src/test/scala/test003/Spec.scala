@@ -5,8 +5,10 @@ import scalikejdbc._
 import scalikejdbc.scalatest.AutoRollback
 import skinny.exception.IllegalAssociationException
 import skinny.orm.{ SkinnyCRUDMapper, SkinnyNoIdCRUDMapper }
+import org.scalatest.funspec
+import org.scalatest.matchers.should.Matchers
 
-class Spec extends fixture.FunSpec with Matchers with Connection with CreateTables with AutoRollback {
+class Spec extends funspec.FixtureAnyFunSpec with Matchers with Connection with CreateTables with AutoRollback {
 
   override def db(): DB = NamedDB(Symbol("test003")).toDB()
 

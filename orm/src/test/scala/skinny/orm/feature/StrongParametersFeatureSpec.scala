@@ -1,9 +1,10 @@
 package skinny.orm.feature
 
-import org.scalatest.{ FunSpec, Matchers }
 import skinny.ParamType
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class StrongParametersFeatureSpec extends FunSpec with Matchers with StrongParametersFeature {
+class StrongParametersFeatureSpec extends AnyFunSpec with Matchers with StrongParametersFeature {
 
   describe("#getTypedValueFromStrongParameter") {
 

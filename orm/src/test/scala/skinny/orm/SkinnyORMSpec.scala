@@ -8,9 +8,11 @@ import org.scalatest.{ Tag => _, _ }
 import skinny.{ Pagination, ParamType, PermittedStrongParameters, StrongParameters }
 import skinny.test.LightFactoryGirl
 import skinny.orm.exception.OptimisticLockException
+import org.scalatest.funspec
+import org.scalatest.matchers.should.Matchers
 
 class SkinnyORMSpec
-    extends fixture.FunSpec
+    extends funspec.FixtureAnyFunSpec
     with Matchers
     with Connection
     with CreateTables

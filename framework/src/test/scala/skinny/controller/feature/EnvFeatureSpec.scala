@@ -2,8 +2,10 @@ package skinny.controller.feature
 
 import org.scalatest._
 import skinny.controller.SkinnyApiController
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class EnvFeatureSpec extends FlatSpec with Matchers {
+class EnvFeatureSpec extends AnyFlatSpec with Matchers {
 
   behavior of "EnvFeature"
 

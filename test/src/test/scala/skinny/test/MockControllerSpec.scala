@@ -2,8 +2,10 @@ package skinny.test
 
 import org.scalatest._
 import skinny._
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class MockControllerSpec extends FunSpec with Matchers {
+class MockControllerSpec extends AnyFunSpec with Matchers {
   System.setProperty(SkinnyEnv.PropertyKey, "test")
 
   class AppTest extends SkinnyController {

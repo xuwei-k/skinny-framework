@@ -7,8 +7,10 @@ import org.scalatest._
 import org.scalatestplus.mockito.MockitoSugar
 import org.mockito.Mockito._
 import scalikejdbc._
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class TxPerRequestFilterSpec extends FunSpec with Matchers with MockitoSugar {
+class TxPerRequestFilterSpec extends AnyFunSpec with Matchers with MockitoSugar {
 
   Class.forName("org.h2.Driver")
   ConnectionPool.add(Symbol("TxPerRequestFilterSpec_ORM"), "jdbc:h2:mem:TxPerRequestFilterSpec_ORM", "sa", "sa")

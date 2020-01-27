@@ -7,8 +7,10 @@ import org.apache.commons.io.FileUtils
 import org.scalatest._
 import scalikejdbc._
 import skinny.{ DBSettings, SkinnyEnv }
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class ReverseScaffoldAllGenerator_Inflector2Spec extends FunSpec with Matchers {
+class ReverseScaffoldAllGenerator_Inflector2Spec extends AnyFunSpec with Matchers {
 
   val generator = new ReverseScaffoldAllGenerator {
     override def sourceDir       = "tmp/ReverseScaffoldAllGeneratorSpec/src/main/scala"

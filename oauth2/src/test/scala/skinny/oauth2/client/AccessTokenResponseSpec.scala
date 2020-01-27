@@ -4,8 +4,10 @@ import org.apache.oltu.oauth2.client.response.OAuthAccessTokenResponse
 import org.scalatest._
 import org.scalatestplus.mockito.MockitoSugar
 import org.mockito.Mockito._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class AccessTokenResponseSpec extends FlatSpec with Matchers with MockitoSugar {
+class AccessTokenResponseSpec extends AnyFlatSpec with Matchers with MockitoSugar {
 
   it should "be available" in {
     val oauthResponse = mock[OAuthAccessTokenResponse]

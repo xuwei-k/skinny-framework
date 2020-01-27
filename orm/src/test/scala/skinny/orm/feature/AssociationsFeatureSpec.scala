@@ -4,8 +4,10 @@ import org.scalatest._
 import scalikejdbc._
 import skinny.orm._
 import skinny.orm.exception.AssociationSettingsException
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class AssociationsFeatureSpec extends FlatSpec with Matchers {
+class AssociationsFeatureSpec extends AnyFlatSpec with Matchers {
   behavior of "AssociationsFeature"
 
   Class.forName("org.h2.Driver")

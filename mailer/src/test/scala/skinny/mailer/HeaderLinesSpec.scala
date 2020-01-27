@@ -4,8 +4,10 @@ import javax.mail.internet.MimeMessage
 
 import org.scalatest._
 import org.scalatestplus.mockito.MockitoSugar
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class HeaderLinesSpec extends FlatSpec with Matchers with MockitoSugar {
+class HeaderLinesSpec extends AnyFlatSpec with Matchers with MockitoSugar {
 
   it should "has #++=, #toSeq" in {
     val headerLines = HeaderLines(new RichMimeMessage {

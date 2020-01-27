@@ -3,8 +3,10 @@ package skinny.util
 import org.joda.time.{ DateTimeZone, LocalTime }
 import org.scalatest._
 import skinny.ParamType
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class DateTimeUtilSpec extends FlatSpec with Matchers {
+class DateTimeUtilSpec extends AnyFlatSpec with Matchers {
 
   behavior of "DateTimeUtil"
 

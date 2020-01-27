@@ -5,8 +5,10 @@ import skinny.test.{ FactoryGirl, MockController }
 import model.Company
 import skinny.Format
 import unit.DBSettings
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class CompaniesControllerSpec extends FunSpec with Matchers with DBSettings {
+class CompaniesControllerSpec extends AnyFunSpec with Matchers with DBSettings {
 
   describe("CompaniesController") {
 

@@ -1,7 +1,9 @@
 package controller
 import org.scalatest._
 import skinny.test._
-class FileUploadControllerSpec extends FunSpec with Matchers {
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
+class FileUploadControllerSpec extends AnyFunSpec with Matchers {
   def createMockController = new FileUploadController with MockServlet
   describe("FileUploadController") {
     it("should work with MockServlet") {

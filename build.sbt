@@ -14,10 +14,10 @@ lazy val skinnyMicroVersion = Def.setting(
       "2.1.0"
   }
 )
-lazy val scalikeJDBCVersion   = "3.3.5"
+lazy val scalikeJDBCVersion   = "3.4.0"
 lazy val h2Version            = "1.4.199"
 lazy val kuromojiVersion      = "8.2.0"
-lazy val mockitoVersion       = "3.0.0"
+lazy val mockitoVersion       = "3.2.4"
 lazy val jettyVersion         = "9.4.19.v20190610"
 lazy val logbackVersion       = "1.2.3"
 lazy val slf4jApiVersion      = "1.7.28"
@@ -374,10 +374,11 @@ lazy val mailDependencies = slf4jApiDependencies ++ Seq(
   "org.jvnet.mock-javamail" % "mock-javamail" % "1.9"   % Provided
 )
 def scalatestV(scalaV: String) = {
-  "3.0.8"
+  "3.1.0"
 }
 def testDependencies(scalaV: String) = Seq(
   "org.scalatest"           %% "scalatest"      % scalatestV(scalaV)   % Test,
+  "org.scalatestplus"       %% "mockito-3-2"    % "3.1.0.0"            % Test,
   "org.mockito"             % "mockito-core"    % mockitoVersion       % Test,
   "ch.qos.logback"          % "logback-classic" % logbackVersion       % Test,
   "org.jvnet.mock-javamail" % "mock-javamail"   % "1.9"                % Test,

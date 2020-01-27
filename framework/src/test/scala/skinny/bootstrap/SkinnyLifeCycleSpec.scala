@@ -4,8 +4,10 @@ import javax.servlet.ServletContext
 
 import org.scalatest._
 import skinny.SkinnyEnv
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class SkinnyLifeCycleSpec extends FunSpec with Matchers {
+class SkinnyLifeCycleSpec extends AnyFunSpec with Matchers {
   System.setProperty(SkinnyEnv.PropertyKey, "test")
 
   val lifeCycle = new SkinnyLifeCycle {

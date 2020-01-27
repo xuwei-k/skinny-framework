@@ -12,8 +12,10 @@ import org.mockito.internal.stubbing.answers._
 import skinny.SkinnyEnv
 import skinny.micro.context.SkinnyContext
 import skinny.test.MockController
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class AssetsControllerSpec extends FlatSpec with Matchers with MockitoSugar {
+class AssetsControllerSpec extends AnyFlatSpec with Matchers with MockitoSugar {
   class MockPassException extends Throwable
 
   def newController = new AssetsController with MockController {

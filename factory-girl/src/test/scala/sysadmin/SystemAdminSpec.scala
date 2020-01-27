@@ -5,9 +5,11 @@ import scalikejdbc._
 import scalikejdbc.scalatest.AutoRollback
 import skinny.logging.Logging
 import skinny.test.FactoryGirl
+import org.scalatest.funspec
+import org.scalatest.matchers.should.Matchers
 
 class userAdminSpec
-    extends fixture.FunSpec
+    extends funspec.FixtureAnyFunSpec
     with Matchers
     with Connection
     with CreateTables

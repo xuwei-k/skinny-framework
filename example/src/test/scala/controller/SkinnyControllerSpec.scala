@@ -5,8 +5,10 @@ import skinny.controller.{ Params, SkinnyController }
 import skinny.controller.feature.RequestScopeFeature._
 import skinny.test._
 import org.joda.time._
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class SkinnyControllerSpec extends FunSpec with Matchers {
+class SkinnyControllerSpec extends AnyFunSpec with Matchers {
 
   describe("SkinnyController") {
 

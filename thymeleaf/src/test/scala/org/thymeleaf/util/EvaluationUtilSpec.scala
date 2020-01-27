@@ -2,8 +2,10 @@ package org.thymeleaf.util
 
 import org.scalatest._
 import org.thymeleaf.util.EvaluationUtil._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class EvaluationUtilSpec extends FlatSpec with Matchers {
+class EvaluationUtilSpec extends AnyFlatSpec with Matchers {
 
   it should "evaluate as boolean value" in {
     {

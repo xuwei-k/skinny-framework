@@ -7,8 +7,10 @@ import skinny.mailer.example.MyMailer2
 
 // TODO wrap Mailbox
 import skinny.mailer.implicits.SkinnyMailerImplicits
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class WithoutTestSupportSpec extends FlatSpec with Matchers with BeforeAndAfter with SkinnyMailerImplicits {
+class WithoutTestSupportSpec extends AnyFlatSpec with Matchers with BeforeAndAfter with SkinnyMailerImplicits {
 
   // set skinny.env as "test"
   System.setProperty(SkinnyEnv.PropertyKey, "test")

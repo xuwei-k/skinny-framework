@@ -3,8 +3,10 @@ package skinny.test
 import javax.servlet.http.HttpUpgradeHandler
 
 import org.scalatest._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class MockHttpServletRequestSpec extends FlatSpec with Matchers {
+class MockHttpServletRequestSpec extends AnyFlatSpec with Matchers {
 
   it should "be available" in {
     val req = new MockHttpServletRequest
