@@ -14,13 +14,13 @@ lazy val skinnyMicroVersion = Def.setting(
       "2.1.0"
   }
 )
-lazy val scalikeJDBCVersion   = "3.3.5"
-lazy val h2Version            = "1.4.199"
+lazy val scalikeJDBCVersion   = "3.4.0"
+lazy val h2Version            = "1.4.200"
 lazy val kuromojiVersion      = "8.2.0"
-lazy val mockitoVersion       = "3.0.0"
-lazy val jettyVersion         = "9.4.19.v20190610"
+lazy val mockitoVersion       = "3.2.4"
+lazy val jettyVersion         = "9.4.26.v20200117"
 lazy val logbackVersion       = "1.2.3"
-lazy val slf4jApiVersion      = "1.7.28"
+lazy val slf4jApiVersion      = "1.7.30"
 lazy val commonsIoVersion     = "2.6"
 lazy val skinnyLogbackVersion = "1.0.14"
 lazy val collectionCompatVersion = Def.setting {
@@ -98,7 +98,7 @@ lazy val common = (project in file("common"))
           else "1.1.2"
         }                      % Compile,
         "org.skinny-framework" %% "skinny-micro-common" % skinnyMicroVersion.value % Compile,
-        "com.typesafe"         % "config" % "1.3.4" % Compile,
+        "com.typesafe"         % "config" % "1.4.0" % Compile,
         "org.apache.lucene"    % "lucene-core" % kuromojiVersion % Provided,
         "org.apache.lucene"    % "lucene-analyzers-common" % kuromojiVersion % Provided,
         "org.apache.lucene"    % "lucene-analyzers-kuromoji" % kuromojiVersion % Provided
@@ -189,8 +189,8 @@ lazy val orm = (project in file("orm"))
   .settings(
     name := "skinny-orm",
     libraryDependencies ++= scalikejdbcDependencies ++ servletApiDependencies ++ Seq(
-      "org.flywaydb"    % "flyway-core"            % "6.0.1"            % Compile,
-      "org.hibernate"   % "hibernate-core"         % "5.4.5.Final"      % Test,
+      "org.flywaydb"    % "flyway-core"            % "6.0.8"            % Compile,
+      "org.hibernate"   % "hibernate-core"         % "5.4.10.Final"     % Test,
       "org.scalikejdbc" %% "scalikejdbc-joda-time" % scalikeJDBCVersion % Test
     ) ++ testDependencies(scalaVersion.value)
   )
@@ -348,7 +348,7 @@ lazy val fullExclusionRules = Seq(
 )
 lazy val compileScalateDependencies = Seq(
   "org.scalatra.scalate" %% "scalamd"      % "1.7.3" % Compile,
-  "org.scalatra.scalate" %% "scalate-core" % "1.9.4" % Compile excludeAll (fullExclusionRules: _*)
+  "org.scalatra.scalate" %% "scalate-core" % "1.9.5" % Compile excludeAll (fullExclusionRules: _*)
 )
 
 lazy val scalikejdbcDependencies = Seq(
@@ -366,7 +366,7 @@ lazy val slf4jApiDependencies = Seq(
   "org.slf4j" % "slf4j-api" % slf4jApiVersion % Compile
 )
 lazy val jodaDependencies = Seq(
-  "joda-time" % "joda-time"    % "2.10.3" % Compile,
+  "joda-time" % "joda-time"    % "2.10.5" % Compile,
   "org.joda"  % "joda-convert" % "2.2.1"  % Compile
 )
 lazy val mailDependencies = slf4jApiDependencies ++ Seq(
