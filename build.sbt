@@ -43,8 +43,8 @@ lazy val baseSettings = Seq(
   ),
   publishTo := _publishTo(version.value),
   sbtPlugin := false,
-  scalaVersion := "2.12.8",
-  crossScalaVersions := Seq("2.13.0", "2.12.8", "2.11.12"),
+  scalaVersion := "2.12.10",
+  crossScalaVersions := Seq("2.13.1", "2.12.10", "2.11.12"),
   scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature"),
   scalacOptions ++= {
     CrossVersion.partialVersion(scalaVersion.value) match {
